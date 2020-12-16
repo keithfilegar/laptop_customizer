@@ -13,11 +13,11 @@ class LaptopComponentOptions extends React.Component {
             <div key={itemHash} className="feature__item">
               <input
                 type="radio"
-                id={this.props.key}
+                id={itemHash}
                 className="feature__option"
                 name={slugify(this.props.feature)}
                 checked={this.props.item.name === this.props.selected[this.props.feature].name}
-                onChange={() => this.props.onUpdateSelection(this.props.feature, this.props.item)}
+                onChange={e => this.props.onUpdateSelection(this.props.feature, this.props.item)}
               />
               <label htmlFor={itemHash} className="feature__label">
                 {this.props.item.name} ({USCurrencyFormat.format(this.props.item.cost)})

@@ -1,7 +1,7 @@
 import React from 'react';
 import LaptopComponentItem from '../LaptopComponentItem/LaptopComponentItem'
 
-class LaptopOptionList extends React.Component {
+class LaptopOptionForm extends React.Component {
 
     render() {
         
@@ -21,4 +21,4 @@ class LaptopOptionList extends React.Component {
         )   
     };
 }
-export default LaptopOptionList
+export default LaptopOptionForm

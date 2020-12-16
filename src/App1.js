@@ -6,7 +6,7 @@ import slugify from 'slugify';
 
 import './App.css';
 import CartList from './CartList/CartList';
-import LaptopOptionList from './LaptopOptionForm/LaptopOptionForm'
+import LaptopOptionForm from './LaptopOptionForm/LaptopOptionForm'
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -95,10 +95,10 @@ class App1 extends Component {
                 <h1>ELF Computing | Laptops</h1>
               </header>
               <main>
-                <LaptopOptionList 
+                <LaptopOptionForm 
                 selected={this.state.selected}
                 features={FEATURES}
-                onUpdateSelection={this.updateFeature}
+                onUpdateSelection={(feature, newValue) => this.updateFeature(feature, newValue)}
                 currencyFormat={USCurrencyFormat}/>
                 <CartList
                 selected={this.state.selected}
